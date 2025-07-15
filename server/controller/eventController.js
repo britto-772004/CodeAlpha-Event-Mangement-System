@@ -6,10 +6,10 @@ const createEvent = async(req , res)=>{
         console.log("HI from create event");
         const db= await getDB();
 
-        const connection = db.collection('Events');
-
-        const {organisationName,eventName , eventType, date, eventMode,teamSize, description,registrationLink } = req.body;
-
+        const connection = await db.collection('Events');
+        console.log("Before input ");
+        const {organisationName,eventName,eventType,date,eventMode,teamSize,description,registrationLink } = req.body;
+        console.log("after input ");
         let data = {
             organisationName : organisationName,
             eventName : eventName,

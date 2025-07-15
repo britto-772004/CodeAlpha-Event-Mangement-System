@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #F5F5F5; /* Secondary color */
+  }
+  
+  .hero {
+    background-color: #3F51B5; /* Primary color */
+    color: white;
+    padding: 3rem;
+    text-align: center;
+  }
+  
+  .content {
+    padding: 2rem;
+  }
+  

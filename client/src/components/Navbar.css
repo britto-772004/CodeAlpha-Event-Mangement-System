@@ -1,0 +1,18 @@
+.navbar {
+    background-color: #3F51B5; /* Primary */
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links li {
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,10 @@
+{
+    organisationName : Kalasalingam,
+    eventName : shek,
+    eventType : Hackathon,
+    date : 25-07-2004,
+    eventMode : Offline,
+    teamSize : 4-6,
+    description : Project presentation ,
+    registrationLink : https://link.url
+    }
