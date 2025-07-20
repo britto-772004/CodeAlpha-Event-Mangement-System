@@ -1,7 +1,112 @@
+.event-page-container {
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  overflow-y: auto;
+  background: #f4f6f9;
+}
+
+/* Button container */
+.create-btn-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1.5rem;
+}
+
+/* Create button style */
+.create-event-btn {
+  background-color: #3f51b5;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.create-event-btn:hover {
+  background-color: #3248d2;
+}
+
+/* Event Grid Layout - Vertical stacking */
 .event-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  animation: fadeInGrid 1s ease-in-out forwards;
+  max-width: 900px;
+  margin: auto;
+}
+
+@keyframes fadeInGrid {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.event-card {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: cardFadeIn 0.6s ease forwards;
+}
+
+@keyframes cardFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.event-card:nth-child(1) { animation-delay: 0.2s; }
+.event-card:nth-child(2) { animation-delay: 0.4s; }
+.event-card:nth-child(3) { animation-delay: 0.6s; }
+.event-card:nth-child(4) { animation-delay: 0.8s; }
+
+.event-card h2 {
+  font-size: 1.6rem;
+  color: #3f51b5;
+  margin-bottom: 2%;
+}
+
+.event-card h3 {
+  font-size: 1.7rem;
+  color: #3248d2;
+  margin-bottom: 1.7rem;
+}
+
+.event-card p {
+  font-size: 1.3rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.view-details-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-details-btn:hover {
+  background-color: #e68900;
+}

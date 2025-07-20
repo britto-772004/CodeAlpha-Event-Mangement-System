@@ -43,7 +43,7 @@ const displayEvent = async(req , res)=>{
         const db = await getDB();
         const connection = db.collection("Events");
 
-        const result = await connection.find({}).toArray();
+        const result = await connection.find().sort({date:1}).toArray();
 
         res.status(200).json({
             message : "Fetched all the data from the database",
@@ -58,6 +58,27 @@ const displayEvent = async(req , res)=>{
     }
 }
 
+const displayEventSingle = async(req , res)=>{
+    // console.log("Hi from display event");
+    try{
+        const db = await getDB();
+        const connection = db.collection("Events");
+        const {id} = req.body;
+        const event = await connection.findOne({ _id: new ObjectId(id) });
+
+        res.status(200).json({
+            message : "Fetched all the data from the database",
+            result : event
+        })
+    }
+    catch(err){
+        console.log("Error  : ",err);
+        res.json({
+            message : "Error while fetching the data from the database",
+            error : err
+        })
+    }
+}
 const editEvent = async(req , res)=>{
     console.log("Hi from edit event");
 
@@ -133,4 +154,4 @@ const deleteEvent = async(req ,res)=>{
     }
 }
 
-module.exports = {createEvent,displayEvent,editEvent,deleteEvent};
+module.exports = {createEvent,displayEvent,editEvent,deleteEvent,displayEventSingle};
