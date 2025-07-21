@@ -68,7 +68,7 @@ const displayEventSingle = async(req , res)=>{
 
         res.status(200).json({
             message : "Fetched all the data from the database",
-            result : event
+            data : event
         })
     }
     catch(err){
@@ -104,7 +104,7 @@ const editEvent = async(req , res)=>{
             { $set: updateddata }        // Update
         );
 
-        if (result.modifiedCount === 0) {
+        if (result.modifiedCount == 0) {
             return res.status(404).json({ message: "No matching document found to update." });
         }
         res.status(200).json({

@@ -8,8 +8,9 @@
 html, body {
   height: 100%;
   font-family: 'Segoe UI', sans-serif;
-  overflow: hidden; /* No scroll */
+  overflow-y: scroll; /* ✅ allow vertical scroll */
 }
+
 
 .landing-page {
   height: 100vh;

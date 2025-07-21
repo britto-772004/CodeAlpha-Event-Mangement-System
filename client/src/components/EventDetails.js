@@ -23,7 +23,7 @@ function EventDetails() {
       <button className="apply-btn" onClick={() => window.open(event.registrationLink, "_blank")}>
         Apply
       </button>
-      <button className="back-btn" onClick={() => navigate("/events")}>Back</button>
+      {/* <button className="back-btn" onClick={() => navigate("/events")}>Back</button> */}
     </div>
   );
 }

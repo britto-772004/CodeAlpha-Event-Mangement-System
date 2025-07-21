@@ -1,8 +1,8 @@
 .event-page-container {
   min-height: 100vh;
-  padding: 2rem 1rem;
-  overflow-y: auto;
-  background: #f4f6f9;
+  padding: 1rem 1rem;
+  overflow-y: scroll;
+  background: #ffffff;
 }
 
 /* Button container */
@@ -39,6 +39,8 @@
   animation: fadeInGrid 1s ease-in-out forwards;
   max-width: 900px;
   margin: auto;
+
+  
 }
 
 @keyframes fadeInGrid {
